@@ -41,6 +41,16 @@ def valid_move?(board, index)
    end
  end
  
+ def turn_count(board)
+  count = 0
+  board.each do |token|
+    if token == "X" || token =="O"
+    count += 1 
+     end
+   end 
+    return count
+ end
+ 
  def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
@@ -58,15 +68,6 @@ def valid_move?(board, index)
   end
 end
 
-def turn_count(board)
-  count = 0
-  board.each do |token|
-    if token == "X" || token =="O"
-    count += 1 
-     end
-   end 
-    return count
- end
 
 def current_player(board)
   count = turn_count(board)
