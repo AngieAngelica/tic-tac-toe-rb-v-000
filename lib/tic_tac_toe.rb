@@ -108,6 +108,7 @@ end
 def draw?(board)
   if !won?(board) && full?(board)
     true
+    print "Cat's Game!"
   else false
   end
 end  
